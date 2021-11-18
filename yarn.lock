@@ -2627,17 +2627,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/esbuild-plugin-pnp@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@yarnpkg/esbuild-plugin-pnp@npm:2.0.0"
-  dependencies:
-    tslib: ^1.13.0
-  peerDependencies:
-    esbuild: ">=0.10.0"
-  checksum: 7b98034f4c0931aa15e9cb2c77c5c485d89df3af31f1ea8223411f8880a2fbe88377d9f71ff45c04aecbcc8b2b47e167991a0f948dc2ec1f4a6ee026fea1fe9d
-  languageName: node
-  linkType: hard
-
 "JSONStream@npm:^1.0.4":
   version: 1.3.5
   resolution: "JSONStream@npm:1.3.5"
@@ -3466,7 +3455,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chardet@npm:^1.3.0, chardet@npm:^1.4.0":
+"chardet@npm:^1.3.0":
   version: 1.4.0
   resolution: "chardet@npm:1.4.0"
   checksum: 9c2f5e5929bb022f4822a6871142bde8a8bc5f0355ae4b6a7f3f2fa4bbeaf180df22c6b25e175d4b0e60d68d98f946fa088098894883b1bd8fcb3d31a79729a8
@@ -4053,13 +4042,6 @@ __metadata:
   dependencies:
     assert-plus: ^1.0.0
   checksum: 3634c249570f7f34e3d34f866c93f866c5b417f0dd616275decae08147dcdf8fccfaa5947380ccfb0473998ea3a8057c0b4cd90c875740ee685d0624b2983598
-  languageName: node
-  linkType: hard
-
-"data-uri-to-buffer@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "data-uri-to-buffer@npm:4.0.0"
-  checksum: a010653869abe8bb51259432894ac62c52bf79ad761d418d94396f48c346f2ae739c46b254e8bb5987bded8a653d467db1968db3a69bab1d33aa5567baa5cfc7
   languageName: node
   linkType: hard
 
@@ -4707,8 +4689,6 @@ __metadata:
     "@types/node": 16.11.7
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
-    "@yarnpkg/esbuild-plugin-pnp": ^2.0.0
-    chardet: ^1.4.0
     cheerio: ^1.0.0-rc.10
     chinese-numbers-to-arabic: ^1.3.2
     chokidar: ^3.5.2
@@ -4729,8 +4709,6 @@ __metadata:
     husky: 7.0.4
     jest: 27.3.1
     node-dev: 7.1.0
-    node-fetch: ^3.1.0
-    ohmyfetch: ^0.4.6
     pinst: 2.1.6
     playwright: ^1.16.3
     prettier: 2.4.1
@@ -4742,8 +4720,6 @@ __metadata:
     typescript: 4.4.4
   dependenciesMeta:
     "@tsconfig/node16@1.0.2":
-      unplugged: true
-    ohmyfetch@0.4.6:
       unplugged: true
     playwright@1.16.3:
       unplugged: true
@@ -5462,15 +5438,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fetch-blob@npm:^3.1.2":
-  version: 3.1.3
-  resolution: "fetch-blob@npm:3.1.3"
-  dependencies:
-    web-streams-polyfill: ^3.0.3
-  checksum: 7be20e9c9a936601c280ef3cfed1968dbcfb35e31564b9bdc807b48de73587cd358b7c3965a3f03483f5268dc373ae8526608947750f22eb214e20c94efab9c1
-  languageName: node
-  linkType: hard
-
 "figures@npm:^2.0.0":
   version: 2.0.0
   resolution: "figures@npm:2.0.0"
@@ -5626,15 +5593,6 @@ __metadata:
     combined-stream: ^1.0.6
     mime-types: ^2.1.12
   checksum: 10c1780fa13dbe1ff3100114c2ce1f9307f8be10b14bf16e103815356ff567b6be39d70fc4a40f8990b9660012dc24b0f5e1dde1b6426166eb23a445ba068ca3
-  languageName: node
-  linkType: hard
-
-"formdata-polyfill@npm:^4.0.10":
-  version: 4.0.10
-  resolution: "formdata-polyfill@npm:4.0.10"
-  dependencies:
-    fetch-blob: ^3.1.2
-  checksum: 82a34df292afadd82b43d4a740ce387bc08541e0a534358425193017bf9fb3567875dc5f69564984b1da979979b70703aa73dee715a17b6c229752ae736dd9db
   languageName: node
   linkType: hard
 
@@ -8503,17 +8461,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^3.0.0, node-fetch@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "node-fetch@npm:3.1.0"
-  dependencies:
-    data-uri-to-buffer: ^4.0.0
-    fetch-blob: ^3.1.2
-    formdata-polyfill: ^4.0.10
-  checksum: 23b5977554d21b72d7d99145d00bcf06e463fa621bf0afc276ad121a79509a133f38c7e470b34aad45d4032d3315bf5584ff6a1cb83e8f01be7a44cc7ac72693
-  languageName: node
-  linkType: hard
-
 "node-gyp@npm:*, node-gyp@npm:^8.2.0, node-gyp@npm:latest":
   version: 8.3.0
   resolution: "node-gyp@npm:8.3.0"
@@ -8981,18 +8928,6 @@ __metadata:
     node-fetch: ^2.6.1
     ufo: ^0.7.9
   checksum: a35277a6db0f3a51f4514c17a58318c1dadd644a6f0dd57be45c40aa34ffe08ef967431d63b923d3144c0d6353a2ab32443282b7801692e9a6fb3b36e986f7d6
-  languageName: node
-  linkType: hard
-
-"ohmyfetch@npm:^0.4.6":
-  version: 0.4.6
-  resolution: "ohmyfetch@npm:0.4.6"
-  dependencies:
-    destr: ^1.1.0
-    node-fetch: ^3.0.0
-    ufo: ^0.7.9
-    undici: ^4.9.5
-  checksum: f2b08aab8f6f74a66fef7d0e3f8c30c8c2bb5b42b52817a746fbc445a399c8584cd9abf72a1a5061323c2c6025b4a01626d1f4f701aa81107cfe4e593085feeb
   languageName: node
   linkType: hard
 
@@ -11084,7 +11019,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.13.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0":
+"tslib@npm:^1.8.1, tslib@npm:^1.9.0":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
@@ -11271,13 +11206,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:^4.9.5":
-  version: 4.10.0
-  resolution: "undici@npm:4.10.0"
-  checksum: 531ba4764561eb1cea758a476e642c962858e91ac48b34bd8b2fb255212452ed7374630e801cd1edb687fb0e8feed08f2db3c63c87150c512e26dfdda1e1ef0f
-  languageName: node
-  linkType: hard
-
 "unique-filename@npm:^1.1.1":
   version: 1.1.1
   resolution: "unique-filename@npm:1.1.1"
@@ -11455,13 +11383,6 @@ __metadata:
   dependencies:
     defaults: ^1.0.3
   checksum: 814e9d1ddcc9798f7377ffa448a5a3892232b9275ebb30a41b529607691c0491de47cba426e917a4d08ded3ee7e9ba2f3fe32e62ee3cd9c7d3bafb7754bd553c
-  languageName: node
-  linkType: hard
-
-"web-streams-polyfill@npm:^3.0.3":
-  version: 3.2.0
-  resolution: "web-streams-polyfill@npm:3.2.0"
-  checksum: e23ad0649392fa0159dbfc6bb27474c308c3f332d9078cfef3c06c154165bef18732c5814126147c6c712f604216ddc950c171c854e3821f020e0d2d721a5958
   languageName: node
   linkType: hard
 
