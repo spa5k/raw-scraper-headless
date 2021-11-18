@@ -5,7 +5,8 @@
     "actions",
     "test",
     "husky",
-    "docs"
+    "docs",
+    "chapter"
   ],
   "search.exclude": {
     "**/.yarn": true,
