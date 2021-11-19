@@ -1270,12 +1270,142 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@node-rs/helper@npm:^1.0.0":
+"@node-rs/helper@npm:^1.0.0, @node-rs/helper@npm:^1.2.1":
   version: 1.2.1
   resolution: "@node-rs/helper@npm:1.2.1"
   dependencies:
     "@napi-rs/triples": ^1.0.3
   checksum: c7b96e46df8a4195e62e51b6f60ed05aff398653c270dc9cffaed749303a4c428215d5826de8511b57cf66f2b0165fb3544fb2aec2aaf385c13ac3b9468bb000
+  languageName: node
+  linkType: hard
+
+"@node-rs/xxhash-android-arm64@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@node-rs/xxhash-android-arm64@npm:1.0.1"
+  conditions: os=android & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@node-rs/xxhash-darwin-arm64@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@node-rs/xxhash-darwin-arm64@npm:1.0.1"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@node-rs/xxhash-darwin-x64@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@node-rs/xxhash-darwin-x64@npm:1.0.1"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@node-rs/xxhash-freebsd-x64@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@node-rs/xxhash-freebsd-x64@npm:1.0.1"
+  conditions: os=freebsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@node-rs/xxhash-linux-arm-gnueabihf@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@node-rs/xxhash-linux-arm-gnueabihf@npm:1.0.1"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@node-rs/xxhash-linux-arm64-gnu@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@node-rs/xxhash-linux-arm64-gnu@npm:1.0.1"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@node-rs/xxhash-linux-arm64-musl@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@node-rs/xxhash-linux-arm64-musl@npm:1.0.1"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@node-rs/xxhash-linux-x64-gnu@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@node-rs/xxhash-linux-x64-gnu@npm:1.0.1"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@node-rs/xxhash-linux-x64-musl@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@node-rs/xxhash-linux-x64-musl@npm:1.0.1"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@node-rs/xxhash-win32-arm64-msvc@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@node-rs/xxhash-win32-arm64-msvc@npm:1.0.1"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@node-rs/xxhash-win32-ia32-msvc@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@node-rs/xxhash-win32-ia32-msvc@npm:1.0.1"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@node-rs/xxhash-win32-x64-msvc@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@node-rs/xxhash-win32-x64-msvc@npm:1.0.1"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@node-rs/xxhash@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "@node-rs/xxhash@npm:1.0.1"
+  dependencies:
+    "@node-rs/helper": ^1.2.1
+    "@node-rs/xxhash-android-arm64": 1.0.1
+    "@node-rs/xxhash-darwin-arm64": 1.0.1
+    "@node-rs/xxhash-darwin-x64": 1.0.1
+    "@node-rs/xxhash-freebsd-x64": 1.0.1
+    "@node-rs/xxhash-linux-arm-gnueabihf": 1.0.1
+    "@node-rs/xxhash-linux-arm64-gnu": 1.0.1
+    "@node-rs/xxhash-linux-arm64-musl": 1.0.1
+    "@node-rs/xxhash-linux-x64-gnu": 1.0.1
+    "@node-rs/xxhash-linux-x64-musl": 1.0.1
+    "@node-rs/xxhash-win32-arm64-msvc": 1.0.1
+    "@node-rs/xxhash-win32-ia32-msvc": 1.0.1
+    "@node-rs/xxhash-win32-x64-msvc": 1.0.1
+  dependenciesMeta:
+    "@node-rs/xxhash-android-arm64":
+      optional: true
+    "@node-rs/xxhash-darwin-arm64":
+      optional: true
+    "@node-rs/xxhash-darwin-x64":
+      optional: true
+    "@node-rs/xxhash-freebsd-x64":
+      optional: true
+    "@node-rs/xxhash-linux-arm-gnueabihf":
+      optional: true
+    "@node-rs/xxhash-linux-arm64-gnu":
+      optional: true
+    "@node-rs/xxhash-linux-arm64-musl":
+      optional: true
+    "@node-rs/xxhash-linux-x64-gnu":
+      optional: true
+    "@node-rs/xxhash-linux-x64-musl":
+      optional: true
+    "@node-rs/xxhash-win32-arm64-msvc":
+      optional: true
+    "@node-rs/xxhash-win32-ia32-msvc":
+      optional: true
+    "@node-rs/xxhash-win32-x64-msvc":
+      optional: true
+  checksum: 9a00f2d90c5ac54193136b2b808a0c1063789b9f17c1248fc89bc5a38e16fad7e95c2e9a25e56d7467aa16d40ac5c2295cc7a6ed555832a62cb78296d0e82d94
   languageName: node
   linkType: hard
 
@@ -1889,6 +2019,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc-node/core@npm:^1.8.0":
+  version: 1.8.0
+  resolution: "@swc-node/core@npm:1.8.0"
+  dependencies:
+    "@swc/core": ^1.2.104
+  checksum: f4637b67a7572292ee242c8919803aa44c1e93274c3f5e8eb43e79715e3193fd319d0f3e8925a29685423d0934f99e17f20eb9937138b0b5f744fd1c3418fba8
+  languageName: node
+  linkType: hard
+
+"@swc-node/jest@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "@swc-node/jest@npm:1.4.1"
+  dependencies:
+    "@node-rs/xxhash": ^1.0.0
+    "@swc-node/core": ^1.8.0
+  checksum: 2f0a31daec8f7027244fb2d75712afd5649ef1755454607cb7c7ee9bd9cc7826ce00ccc3aceafbece38fd08859b15c9d8d41c471ea66a9dcfb202df0865f1b8f
+  languageName: node
+  linkType: hard
+
 "@swc/cli@npm:^0.1.51":
   version: 0.1.51
   resolution: "@swc/cli@npm:0.1.51"
@@ -1994,7 +2143,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/core@npm:^1.2.111":
+"@swc/core@npm:^1.2.104, @swc/core@npm:^1.2.111":
   version: 1.2.111
   resolution: "@swc/core@npm:1.2.111"
   dependencies:
@@ -4007,15 +4156,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-fetch@npm:^3.1.4":
-  version: 3.1.4
-  resolution: "cross-fetch@npm:3.1.4"
-  dependencies:
-    node-fetch: 2.6.1
-  checksum: 2107e5e633aa327bdacab036b1907c7ddd28651ede0c1d4fd14db04510944d56849a8255e2f5b8f9a1da0e061b6cee943f6819fe29ed9a130195e7fadd82a4ff
-  languageName: node
-  linkType: hard
-
 "cross-spawn@npm:^7.0.2, cross-spawn@npm:^7.0.3":
   version: 7.0.3
   resolution: "cross-spawn@npm:7.0.3"
@@ -4760,6 +4900,7 @@ __metadata:
     "@semantic-release/github": 8.0.2
     "@semantic-release/npm": 8.0.3
     "@semantic-release/release-notes-generator": 10.0.2
+    "@swc-node/jest": ^1.4.1
     "@swc/cli": ^0.1.51
     "@swc/core": ^1.2.111
     "@swc/helpers": ^0.2.14
@@ -4772,8 +4913,6 @@ __metadata:
     chinese-numbers-to-arabic: ^1.3.2
     chokidar: ^3.5.2
     commitizen: 4.2.4
-    cross-fetch: ^3.1.4
-    domhandler: ^4.2.2
     dotenv: 10.0.0
     eslint: 8.2.0
     eslint-config-galex: 3.3.3
@@ -8637,13 +8776,6 @@ __metadata:
   dependencies:
     lodash: ^4.17.21
   checksum: e8c856c04a1645062112a72e59a98b203505ed5111ff84a3a5f40611afa229b578c7d50f1e6a7f17aa62baeea4a640d2e2f61f63afc05423aa267af10977fb2b
-  languageName: node
-  linkType: hard
-
-"node-fetch@npm:2.6.1":
-  version: 2.6.1
-  resolution: "node-fetch@npm:2.6.1"
-  checksum: 91075bedd57879117e310fbcc36983ad5d699e522edb1ebcdc4ee5294c982843982652925c3532729fdc86b2d64a8a827797a745f332040d91823c8752ee4d7c
   languageName: node
   linkType: hard
 
