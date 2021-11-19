@@ -2,16 +2,9 @@ import { toArabicString } from "chinese-numbers-to-arabic";
 import type { QuickCrawlerOutput } from "quick-scraper";
 import { scrapeHtml } from "quick-scraper";
 import { scraper } from "../utils/scraper";
+import type { TOC } from "../utils/types";
 
-export const ptwxzTocScraper = async (
-  url: string
-): Promise<
-  {
-    number: number;
-    title: string;
-    url: string;
-  }[]
-> => {
+export const ptwxzTocScraper = async (url: string): Promise<TOC[]> => {
   const content = await scraper(url);
   let data: QuickCrawlerOutput;
   try {
