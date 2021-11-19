@@ -2,7 +2,7 @@ import { load } from "cheerio";
 import { parseDocument } from "htmlparser2";
 import { scraper } from "../utils/scraper";
 
-export const chapterScraper = async (): Promise<string[]> => {
+export const ptwxzChapterScraper = async (): Promise<string[]> => {
   const content = await scraper(
     "https://www.ptwxz.com/html/8/8965/9656168.html"
   );

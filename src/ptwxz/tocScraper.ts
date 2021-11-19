@@ -3,7 +3,7 @@ import type { QuickCrawlerOutput } from "quick-scraper";
 import { scrapeHtml } from "quick-scraper";
 import { scraper } from "../utils/scraper";
 
-export const tocScraper = async (
+export const ptwxzTocScraper = async (
   url: string
 ): Promise<
   {
@@ -17,6 +17,7 @@ export const tocScraper = async (
   try {
     data = await scrapeHtml({
       html: content,
+      baseUrl: "https://ptwxz.com/",
       options: {
         chapters: {
           selector: ".centent > ul> li > a",
