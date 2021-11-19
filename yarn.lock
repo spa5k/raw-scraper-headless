@@ -2801,6 +2801,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@yarnpkg/esbuild-plugin-pnp@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@yarnpkg/esbuild-plugin-pnp@npm:2.0.0"
+  dependencies:
+    tslib: ^1.13.0
+  peerDependencies:
+    esbuild: ">=0.10.0"
+  checksum: 7b98034f4c0931aa15e9cb2c77c5c485d89df3af31f1ea8223411f8880a2fbe88377d9f71ff45c04aecbcc8b2b47e167991a0f948dc2ec1f4a6ee026fea1fe9d
+  languageName: node
+  linkType: hard
+
 "JSONStream@npm:^1.0.4":
   version: 1.3.5
   resolution: "JSONStream@npm:1.3.5"
@@ -4909,6 +4920,7 @@ __metadata:
     "@types/node": 16.11.9
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+    "@yarnpkg/esbuild-plugin-pnp": ^2.0.0
     cheerio: ^1.0.0-rc.10
     chinese-numbers-to-arabic: ^1.3.2
     chokidar: ^3.5.2
@@ -4941,7 +4953,7 @@ __metadata:
     regenerator-runtime: ^0.13.9
     semantic-release: 18.0.0
     tslib: 2.3.1
-    tsup: 5.7.2
+    tsup: ^5.7.2
     typescript: 4.4.4
   dependenciesMeta:
     "@tsconfig/node16@1.0.2":
@@ -11442,14 +11454,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.8.1, tslib@npm:^1.9.0":
+"tslib@npm:^1.13.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
   languageName: node
   linkType: hard
 
-"tsup@npm:5.7.2":
+"tsup@npm:^5.7.2":
   version: 5.7.2
   resolution: "tsup@npm:5.7.2"
   dependencies:

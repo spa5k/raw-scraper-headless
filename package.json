@@ -43,6 +43,7 @@
     "@types/node": "16.11.9",
     "@typescript-eslint/eslint-plugin": "5.4.0",
     "@typescript-eslint/parser": "5.4.0",
+    "@yarnpkg/esbuild-plugin-pnp": "^2.0.0",
     "chokidar": "^3.5.2",
     "commitizen": "4.2.4",
     "dotenv": "10.0.0",
@@ -63,7 +64,7 @@
     "regenerator-runtime": "^0.13.9",
     "semantic-release": "18.0.0",
     "tslib": "2.3.1",
-    "tsup": "5.7.2",
+    "tsup": "^5.7.2",
     "typescript": "4.4.4"
   },
   "files": [
@@ -93,6 +94,7 @@
     "url": "git+https://github.com/spa5k/esbuild-typescript-library-template.git"
   },
   "scripts": {
+    "build": "tsup-node",
     "build:dev": "swc src --out-dir dist --watch",
     "dev": "node-dev dist/index.js --notify=false",
     "format": "prettier --write .",
