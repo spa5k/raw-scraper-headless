@@ -4953,7 +4953,7 @@ __metadata:
     regenerator-runtime: ^0.13.9
     semantic-release: 18.0.0
     tslib: 2.3.1
-    tsup: ^5.7.2
+    tsup: ^5.7.4
     typescript: 4.4.4
   dependenciesMeta:
     "@tsconfig/node16@1.0.2":
@@ -10460,9 +10460,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.56.1":
-  version: 2.58.3
-  resolution: "rollup@npm:2.58.3"
+"rollup@npm:^2.60.0":
+  version: 2.60.0
+  resolution: "rollup@npm:2.60.0"
   dependencies:
     fsevents: ~2.3.2
   dependenciesMeta:
@@ -10470,7 +10470,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 20305ac3aea2a62be1728cfd3477419431bad2931532cc136da1904841fa03c318b231027b3a3da077baa0a874c20d72985bf74ed42dad103e88de610eb447a9
+  checksum: ef267b49a203f3db86d6db8c63de8737d6e3995d988dadf35c1922964c21cafbb95990543cfc716356d31bf6ca3975e58d9195df85b28721ecdc9acd3693acca
   languageName: node
   linkType: hard
 
@@ -11461,9 +11461,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsup@npm:^5.7.2":
-  version: 5.7.2
-  resolution: "tsup@npm:5.7.2"
+"tsup@npm:^5.7.4":
+  version: 5.7.4
+  resolution: "tsup@npm:5.7.4"
   dependencies:
     cac: ^6.7.2
     chalk: ^4.1.0
@@ -11475,7 +11475,7 @@ __metadata:
     joycon: ^3.0.1
     postcss-load-config: ^3.0.1
     resolve-from: ^5.0.0
-    rollup: ^2.56.1
+    rollup: ^2.60.0
     sucrase: ^3.20.1
     tree-kill: ^1.2.2
   peerDependencies:
@@ -11486,7 +11486,7 @@ __metadata:
   bin:
     tsup: dist/cli-default.js
     tsup-node: dist/cli-node.js
-  checksum: f989296fcd3a7d64ec84bfa2a21a1e2a9be9b7a927a7c9a650f056d70ef0fe42b1d4c027e5377ec846db1928b9caaf1c738311e77c24dbde19a5fabe44dfa48e
+  checksum: 059f6deb086d5bea93460e46b69b44d82da8ddfc5b18f08df3833f27163adf999cdecddc6080cd6d559e636279246b7eb1678460e236df96f79d34e2cd8453e9
   languageName: node
   linkType: hard
 
