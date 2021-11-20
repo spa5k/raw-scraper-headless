@@ -1,19 +1,28 @@
 import { toArabicString } from "chinese-numbers-to-arabic";
+import type { Page } from "puppeteer";
 import type { QuickCrawlerOutput } from "quick-scraper";
 import { scrapeHtml } from "quick-scraper";
-import { scraper } from "../utils/scraper";
-import type { TOC } from "../utils/types";
+import { scraper } from "../../utils/scraper";
+import type { TocItem } from "../../utils/types";
 
-export const ptwxzTocScraper = async (url: string): Promise<TOC[]> => {
-  const content = await scraper(url);
+export const snTocScraper = async (
+  url: string,
+  page: Page
+): Promise<TocItem[]> => {
+  const content = await scraper(url, page);
+
+  if (!content) {
+    throw new Error("No content found for the page");
+  }
+
   let data: QuickCrawlerOutput;
   try {
     data = await scrapeHtml({
       html: content,
-      baseUrl: "https://ptwxz.com/",
+      baseUrl: "https://www.69shu.com/",
       options: {
         chapters: {
-          selector: ".centent > ul> li > a",
+          selector: "#catalog > ul> li > a",
           listItem: true,
           href: true,
         },
@@ -21,7 +30,7 @@ export const ptwxzTocScraper = async (url: string): Promise<TOC[]> => {
     });
   } catch (error) {
     console.log(error);
-    throw new Error("Error while scrapingggggggggg");
+    throw new Error("Error while scraping");
   }
 
   const chaptersArray = data.data.chapters.lists;

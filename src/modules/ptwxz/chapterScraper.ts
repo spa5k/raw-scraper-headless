@@ -1,11 +1,17 @@
 import { load } from "cheerio";
 import { parseDocument } from "htmlparser2";
-import { scraper } from "../utils/scraper";
+import type { Page } from "puppeteer";
+import { scraper } from "../../utils/scraper";
 
-export const ptwxzChapterScraper = async (): Promise<string[]> => {
+export const ptwxzChapterScraper = async (page: Page): Promise<string[]> => {
   const content = await scraper(
-    "https://www.ptwxz.com/html/8/8965/9656168.html"
+    "https://www.ptwxz.com/html/8/8965/9656168.html",
+    page
   );
+
+  if (!content) {
+    throw new Error("No content found for the page");
+  }
 
   const dom = parseDocument(content);
   const $ = load(dom);

@@ -1,11 +1,14 @@
 import { isUrlString } from "is-url-online";
+import type { Page } from "puppeteer";
 import { lastChapterInfoScraper } from "../utils/lastChapterInfoScraper";
+import { titleCleaner } from "../utils/titleCleaner";
 
 type Selector = {
   sourceUrl: string;
   numberSelector: string;
   linkSelector: string;
   titleSelector: string;
+  page: Page;
 };
 
 export const lastChapterInfo = async ({
@@ -13,6 +16,7 @@ export const lastChapterInfo = async ({
   numberSelector,
   sourceUrl,
   titleSelector,
+  page,
 }: Selector): Promise<{
   link: string;
   number: number;
@@ -22,29 +26,31 @@ export const lastChapterInfo = async ({
     sourceUrl,
     linkSelector,
     numberSelector,
-    titleSelector
+    titleSelector,
+    page
   );
 
-  if (content.link === "") {
+  if (content.url === "") {
     throw new Error("No link found");
   }
 
   if (!content.number || !content.title) {
     throw new Error("No number or title found");
   }
-  const urlString = isUrlString(content.link);
+  const urlString = isUrlString(content.url);
 
-  let url = content.link;
+  let { url } = content;
   if (!urlString) {
     const { href: absoluteUrl } = new URL(url, sourceUrl);
 
     url = absoluteUrl;
   }
-  const number = Number.parseInt(content.number.replace(/^\D+/gu, ""));
+
+  const { number, title } = content;
 
   return {
     link: url,
     number,
-    title: content.title.trim(),
+    title: titleCleaner(title.trim()),
   };
 };

@@ -1,65 +1,46 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
-import puppeteer from "puppeteer-extra";
-import adblockerPlugin from "puppeteer-extra-plugin-adblocker";
-import stealthPlugin from "puppeteer-extra-plugin-stealth";
-
-const blockResourcesPlugin =
-  require("puppeteer-extra-plugin-block-resources")();
+import type { Page } from "puppeteer";
+import type { TocItem } from "./types";
 
 export const lastChapterInfoScraper = async (
-  url: string,
+  link: string,
   linkSelector: string,
   numberSelector: string,
-  titleSelector: string
-): Promise<{
-  link: string;
-  number: string;
-  title: string;
-}> => {
-  puppeteer.use(adblockerPlugin()).use(stealthPlugin());
-
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
+  titleSelector: string,
+  page: Page
+): Promise<TocItem> => {
   const navigationPromise = page.waitForNavigation();
 
-  blockResourcesPlugin.blockedTypes.add("media");
-  blockResourcesPlugin.blockedTypes.add("image");
-  blockResourcesPlugin.blockedTypes.add("stylesheet");
-  blockResourcesPlugin.blockedTypes.add("font");
-
-  await page.goto(url, { waitUntil: "domcontentloaded" });
-
-  await page.goto(url);
-
-  await page.setViewport({ width: 2560, height: 1333 });
-
-  await navigationPromise;
+  await page.goto(link, { waitUntil: "domcontentloaded" });
 
   await navigationPromise;
 
   await page.waitForSelector(linkSelector);
 
-  const link = await page.$eval(linkSelector, (elm) =>
-    elm.getAttribute("href")
-  );
-  await page.waitForSelector(numberSelector);
+  const url = await page.$eval(linkSelector, (elm) => elm.getAttribute("href"));
 
-  const numberElement = await page.$(numberSelector);
-  const number: string = await page.evaluate(
-    (el) => el.textContent,
-    numberElement
-  );
+  if (!url) {
+    throw new Error("No link found");
+  }
 
-  const titleElement = await page.$(titleSelector);
-  const title: string = await page.evaluate(
-    (el) => el.textContent,
-    titleElement
+  const numberString = await page.$eval(
+    numberSelector,
+    (elm) => elm.textContent
   );
 
-  await browser.close();
+  if (!numberString) {
+    throw new Error("No number found");
+  }
+
+  const title = await page.$eval(titleSelector, (elm) => elm.textContent);
+
+  if (!title) {
+    throw new Error("No title found");
+  }
+  const number = Number.parseInt(numberString.replace(/^\D+/gu, ""));
+
   return {
-    link: link ?? "",
-    number: number.trim(),
+    url,
+    number,
     title: title.trim(),
   };
 };
