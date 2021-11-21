@@ -4,11 +4,9 @@ const firstLettersToBeRemoved = new Set(["第", "#", "the"]);
 
 export const titleCleaner = (title: string): string => {
   const words = title.split(" ").filter((word) => word.length > 0);
-  console.log("word", words);
 
   // This will handle mainly the english translations, like in wuxiaworld.
   if (words[0].toLowerCase() === "chapter") {
-    console.log("shifted");
     words.shift();
     words.shift();
   }

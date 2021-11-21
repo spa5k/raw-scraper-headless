@@ -3,11 +3,11 @@ import { parseDocument } from "htmlparser2";
 import type { Page } from "puppeteer";
 import { scraper } from "../../utils/scraper";
 
-export const snChapterScraper = async (page: Page): Promise<string[]> => {
-  const content = await scraper(
-    "https://www.ptwxz.com/html/8/8965/9656168.html",
-    page
-  );
+export const snChapterScraper = async (
+  url: string,
+  page: Page
+): Promise<string[]> => {
+  const content = await scraper(url, page);
 
   if (!content) {
     throw new Error("No content found for the page");
