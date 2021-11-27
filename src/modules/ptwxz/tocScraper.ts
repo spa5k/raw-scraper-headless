@@ -1,8 +1,7 @@
 import { toArabicString } from "chinese-numbers-to-arabic";
 import type { Page } from "puppeteer";
-import type { QuickCrawlerOutput } from "quick-scraper";
-import { scrapeHtml } from "quick-scraper";
-import { scraper } from "../../utils/scraper";
+import type { QuickScraperOutput } from "quick-scraper";
+import { quickScraperHeadless } from "quick-scraper";
 import { titleCleaner } from "../../utils/titleCleaner";
 import type { TocItem } from "../../utils/types";
 
@@ -10,17 +9,11 @@ export const ptwxzTocScraper = async (
   url: string,
   page: Page
 ): Promise<TocItem[]> => {
-  const content = await scraper(url, page);
+  let data: QuickScraperOutput;
 
-  if (!content) {
-    throw new Error("No content found for the page");
-  }
-
-  let data: QuickCrawlerOutput;
   try {
-    data = await scrapeHtml({
-      html: content,
-      baseUrl: "https://ptwxz.com/",
+    data = await quickScraperHeadless({
+      url,
       options: {
         chapters: {
           selector: ".centent > ul> li > a",
@@ -28,10 +21,10 @@ export const ptwxzTocScraper = async (
           href: true,
         },
       },
+      page,
     });
   } catch (error) {
-    console.log(error);
-    throw new Error("Error while scraping");
+    throw new Error(`Error while scraping - ${error as string}`);
   }
 
   const chaptersArray = data.data.chapters.lists;

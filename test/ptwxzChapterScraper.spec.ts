@@ -1,4 +1,4 @@
-import puppeteer from "puppeteer-extra";
+import puppeteer from "puppeteer";
 import { ptwxzChapterScraper } from "../src";
 
 const testsArray: {
@@ -29,6 +29,7 @@ describe("ptwxzChapterScraper", () => {
       expect(await ptwxzChapterScraper(url, page).then((text) => text[0])).toBe(
         output
       );
+      await browser.close();
     });
   });
 });

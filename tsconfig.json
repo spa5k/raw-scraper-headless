@@ -3,11 +3,12 @@
   "display": "Node 16",
 
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "es2021"],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "module": "commonjs",
     "target": "es2021",
-    "emitDeclarationOnly": true,
-    "declaration": true,
+    // "emitDeclarationOnly": true,
+    // "declaration": true,
+    "noEmit": true,
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,

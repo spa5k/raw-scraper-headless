@@ -1,4 +1,4 @@
-import puppeteer from "puppeteer-extra";
+import puppeteer from "puppeteer";
 import { ptwxzTocScraper } from "../src";
 
 const testsArray: {
@@ -18,7 +18,7 @@ const testsArray: {
     url: "https://www.ptwxz.com/html/10/10272/",
   },
 ];
-jest.setTimeout(10_000);
+jest.setTimeout(20_000);
 
 describe("ptwxzTocScraper", () => {
   testsArray.forEach(({ output, url }, index) => {

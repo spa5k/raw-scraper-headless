@@ -1,7 +1,7 @@
 import { toArabicString } from "chinese-numbers-to-arabic";
 import type { Page } from "puppeteer";
-import type { QuickCrawlerOutput } from "quick-scraper";
-import { scrapeHtml } from "quick-scraper";
+import type { QuickScraperOutput } from "quick-scraper";
+import { quickScraperHeadless } from "quick-scraper";
 import { scraper } from "../../utils/scraper";
 import type { TocItem } from "../../utils/types";
 
@@ -15,11 +15,10 @@ export const snTocScraper = async (
     throw new Error("No content found for the page");
   }
 
-  let data: QuickCrawlerOutput;
+  let data: QuickScraperOutput;
   try {
-    data = await scrapeHtml({
-      html: content,
-      baseUrl: "https://www.69shu.com/",
+    data = await quickScraperHeadless({
+      url,
       options: {
         chapters: {
           selector: "#catalog > ul> li > a",
@@ -27,6 +26,7 @@ export const snTocScraper = async (
           href: true,
         },
       },
+      page,
     });
   } catch (error) {
     console.log(error);

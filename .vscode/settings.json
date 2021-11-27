@@ -7,7 +7,8 @@
     "husky",
     "docs",
     "chapter",
-    "toc"
+    "toc",
+    "test"
   ],
   "search.exclude": {
     "**/.yarn": true,

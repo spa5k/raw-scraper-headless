@@ -1,4 +1,4 @@
-import puppeteer from "puppeteer-extra";
+import puppeteer from "puppeteer";
 import { snTocScraper } from "../src";
 
 const testsArray: {
@@ -24,6 +24,7 @@ describe("ptwxzTocScraper", () => {
       expect(await snTocScraper(url, page).then((text) => text[0].title)).toBe(
         output
       );
+      await browser.close();
     });
   });
 });

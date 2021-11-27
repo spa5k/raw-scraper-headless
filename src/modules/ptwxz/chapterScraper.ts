@@ -1,5 +1,4 @@
 import { load } from "cheerio";
-import { parseDocument } from "htmlparser2";
 import type { Page } from "puppeteer";
 import { scraper } from "../../utils/scraper";
 
@@ -13,8 +12,7 @@ export const ptwxzChapterScraper = async (
     throw new Error("No content found for the page");
   }
 
-  const dom = parseDocument(content);
-  const $ = load(dom);
+  const $ = load(content);
 
   const chapterText = $("#content")
     .contents()

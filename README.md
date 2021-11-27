@@ -6,7 +6,7 @@
 ```ts
 puppeteer.use(adblockerPlugin()).use(stealthPlugin());
 
-const browser = await puppeteer.launch({ headless: false });
+const browser = await puppeteer.launch({ headless: true });
 const page = await browser.newPage();
 
 blockResourcesPlugin.blockedTypes.add("media");

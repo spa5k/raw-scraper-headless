@@ -19,7 +19,7 @@ const testsArray: {
   },
 ];
 
-jest.setTimeout(10_000);
+jest.setTimeout(20_000);
 
 describe("sixNineShuChapterScraper", () => {
   testsArray.forEach(({ output, url }, index) => {
@@ -29,6 +29,7 @@ describe("sixNineShuChapterScraper", () => {
       expect(await snChapterScraper(url, page).then((text) => text[0])).toBe(
         output
       );
+      await browser.close();
     });
   });
 });
